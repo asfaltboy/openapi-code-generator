@@ -417,9 +417,9 @@ export function createRouter(implementation: Implementation): KoaRouter {
   const verifyAppAuthenticatorPushNotificationChallengeResponseValidator =
     responseValidationFactory(
       [
-        ["200", z.void()],
-        ["204", z.void()],
-        ["400", z.void()],
+        ["200", z.undefined()],
+        ["204", z.undefined()],
+        ["400", z.undefined()],
       ],
       undefined,
     )
@@ -506,7 +506,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
   const deleteAppAuthenticatorEnrollmentResponseValidator =
     responseValidationFactory(
       [
-        ["204", z.void()],
+        ["204", z.undefined()],
         ["401", s_Error],
         ["403", s_Error],
         ["404", s_Error],
@@ -656,7 +656,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
 
   const deleteEmailResponseValidator = responseValidationFactory(
     [
-      ["204", z.void()],
+      ["204", z.undefined()],
       ["400", s_Error],
       ["401", s_Error],
       ["403", s_Error],
@@ -800,7 +800,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
 
   const verifyEmailOtpResponseValidator = responseValidationFactory(
     [
-      ["200", z.void()],
+      ["200", z.undefined()],
       ["401", s_Error],
       ["403", s_Error],
       ["404", s_Error],
@@ -909,7 +909,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
 
   const deletePhoneResponseValidator = responseValidationFactory(
     [
-      ["204", z.void()],
+      ["204", z.undefined()],
       ["401", s_Error],
       ["403", s_Error],
       ["404", s_Error],
@@ -997,7 +997,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
 
   const verifyPhoneChallengeResponseValidator = responseValidationFactory(
     [
-      ["204", z.void()],
+      ["204", z.undefined()],
       ["400", s_Error],
       ["401", s_Error],
       ["403", s_Error],

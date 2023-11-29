@@ -681,7 +681,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
 
   const deleteClientResponseValidator = responseValidationFactory(
     [
-      ["204", z.void()],
+      ["204", z.undefined()],
       ["403", s_Error],
       ["404", s_Error],
       ["429", s_Error],
@@ -879,7 +879,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
 
   const revokeResponseValidator = responseValidationFactory(
     [
-      ["200", z.void()],
+      ["200", z.undefined()],
       ["400", s_OAuthError],
       ["401", s_OAuthError],
       ["429", s_Error],
@@ -930,8 +930,8 @@ export function createRouter(implementation: Implementation): KoaRouter {
   const userinfoResponseValidator = responseValidationFactory(
     [
       ["200", s_UserInfo],
-      ["401", z.void()],
-      ["403", z.void()],
+      ["401", z.undefined()],
+      ["403", z.undefined()],
       ["429", s_Error],
     ],
     undefined,
@@ -1323,7 +1323,7 @@ export function createRouter(implementation: Implementation): KoaRouter {
 
   const revokeCustomAsResponseValidator = responseValidationFactory(
     [
-      ["200", z.void()],
+      ["200", z.undefined()],
       ["400", s_OAuthError],
       ["401", s_OAuthError],
       ["429", s_Error],
@@ -1390,8 +1390,8 @@ export function createRouter(implementation: Implementation): KoaRouter {
   const userinfoCustomAsResponseValidator = responseValidationFactory(
     [
       ["200", s_UserInfo],
-      ["401", z.void()],
-      ["403", z.void()],
+      ["401", z.undefined()],
+      ["403", z.undefined()],
       ["429", s_Error],
     ],
     undefined,
